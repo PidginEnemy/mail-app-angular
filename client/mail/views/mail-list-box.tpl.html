@@ -1,0 +1,18 @@
+<div class="mail-list-filter">
+	<button class="btn btn-default btn-block" ui-sref="mail.list({ box:'inbox' })" ui-sref-active="active">
+		<span class="glyphicon glyphicon-download"></span>
+		Inbox <span class="badge">{{mailListBoxCtrl.countNewInbox}}</span>
+	</button>
+	<button class="btn btn-default btn-block" ui-sref="mail.list({ box:'outbox' })" ui-sref-active="active">
+		<span class="glyphicon glyphicon-upload"></span>
+		Outbox
+	</button>
+	<button class="btn btn-default btn-block" ui-sref="mail.list({ box:'spam' })" ui-sref-active="active">
+		<span class="glyphicon glyphicon-ban-circle"></span>
+		Spam
+	</button>
+	<button class="btn btn-default btn-block" ui-sref="mail.list({ box:'trash' })" ui-sref-active="active">
+		<span class="glyphicon glyphicon-trash"></span>
+		Trash
+	</button>
+</div>

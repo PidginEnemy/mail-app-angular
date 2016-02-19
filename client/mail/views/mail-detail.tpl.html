@@ -1,0 +1,20 @@
+<div class="col-xs-12 mail-detail-back">
+	<a class="btn btn-default" title="Back to mail list" ng-click="mailDetailCtrl.backToList()">
+		<span class="glyphicon glyphicon-arrow-left"></span>
+	</a>
+</div>
+<div class="col-xs-12">
+	<div class="pull-left">
+		<img class="img-circle" src="{{mailDetailCtrl.mail.picture}}"/>
+		<strong>{{mailDetailCtrl.mail.name}}</strong>
+		<p>{{mailDetailCtrl.mail.email}}</p>
+		<p>{{mailDetailCtrl.mail.dtReceived | date:'dd.MM.yy'}}</p>
+	</div>
+</div>
+<div class="col-xs-12"> 
+	<p>{{mailDetailCtrl.mail.text}}</p>
+	<div ng-if="mailDetailCtrl.mail.withAttachments">
+		<strong>Attachment:</strong><br/>
+		<img ng-src="http://thecatapi.com/api/images/get?format=src&type=gif&size=small&guid={{mailDetailCtrl.mail.guid}}"/>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "catmail",
+  "description": "",
+  "main": "",
+  "authors": [
+    "PidginEnemy"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/PidginEnemy/PidginEnemy.github.io.git",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-ui-router": "~0.2.18",
+    "a0-angular-storage": "~0.0.13",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.0"
+  }
+}

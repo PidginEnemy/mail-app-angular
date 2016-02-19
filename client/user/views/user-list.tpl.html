@@ -1,0 +1,11 @@
+<table class="table table-hover user-list-table">
+	<tbody>
+	  <tr ng-repeat="user in userListCtrl.usersList" ng-click="userListCtrl.userOnClick(user.id)">
+	    <td>
+	      <img src="{{user.picture.small}}" class="img-circle"/>
+	    </td>
+	    <td>{{user.surName}} {{user.firstName}}</td>
+	    <td>{{user.email}}</td>
+	  </tr>
+	</tbody>
+</table>

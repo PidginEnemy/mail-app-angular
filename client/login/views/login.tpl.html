@@ -1,0 +1,19 @@
+<div class="login-page">
+	<div class="container text-center">
+		<form class="form-signin clearfix">
+			<div class="form-signin-logo clearfix">
+				<a href="#"><span class="navbar-logo glyphicon glyphicon-envelope"></span></a>
+				<a href="#" class="navbar-brand">CatMail</a>
+			</div>
+		    <div class="form-group">
+			    <label for="loginName">Username</label>
+			    <input type="text" id="loginName" class="form-control" placeholder="Введите логин" autofocus="" ng-model="loginCtrl.credits.name">
+			</div>
+			<div class="form-group">
+			    <label for="loginPassword">Pasword</label>
+			    <input type="password" id="loginPassword" class="form-control" placeholder="Введите пароль" ng-model="loginCtrl.credits.password">
+			</div>
+		    <button class="btn btn-lg btn-default" ng-click="loginCtrl.login()" type="submit">Login</button>
+	  </form>
+	</div>
+</div>

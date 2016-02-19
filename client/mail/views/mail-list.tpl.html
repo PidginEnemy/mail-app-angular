@@ -1,0 +1,11 @@
+<table class="table table-hover mail-list-table">
+	<tbody>
+		<tr ng-repeat="mail in mailListCtrl.mailList | orderBy:dtReceived" ng-class="{ unread: mailListCtrl.isMailUnread(mail) }" ng-click="mailListCtrl.mailItemOnClick(mail._id)">
+			<td><img ng-src="{{mail.picture}}" class="img-circle"/></td>
+			<td>{{mail.name}}</td>
+			<td>{{mail.subject}}</td>
+			<td><span ng-if="mail.withAttachments" class="glyphicon glyphicon-paperclip"></span></td>
+			<td>{{mail.dtReceived | date:'dd.MM.yy'}}</td>
+		</tr>
+	</tbody>
+</table>

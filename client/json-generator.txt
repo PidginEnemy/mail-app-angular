@@ -1,0 +1,36 @@
+Data template for json-generator: http://www.json-generator.com/
+MAIL LIST TEMPLATE
+[
+  '{{repeat(250, 300)}}',
+  {
+    _id: '{{objectId()}}',
+    index: '{{index()}}',
+    guid: '{{guid()}}',
+    picture: 'http://placehold.it/32x32?text=JS',
+    mailBoxType: '{{random("inbox", "outbox", "spam", "trash")}}',
+    name: '{{firstName()}} {{surname()}}',
+    company: '{{company().toUpperCase()}}',
+    dtReceived: '{{date(new Date(2015,08,15),new Date())}}',
+    email: '{{email()}}',
+    subject: '{{lorem(1,"sentences")}}',
+    text: '{{lorem(1, "paragraphs")}}',
+    withAttachments: '{{bool()}}',
+    isNew: '{{bool()}}'
+  }
+]
+USER LIST TEMPLATE
+[
+  '{{repeat(40, 40)}}',
+  {
+    id: '{{index(1)}}',
+    picture: {
+      large: 'https://randomuser.me/api/portraits/{{random("men", "women")}}/{{index(1)}}.jpg',
+      medium: 'https://randomuser.me/api/portraits/med/{{random("men", "women")}}/{{index(1)}}.jpg',
+      small: 'https://randomuser.me/api/portraits/thumb/{{random("men", "women")}}/{{index(1)}}.jpg'
+    },
+    firstName: '{{firstName()}}',
+    surName: '{{surname()}}',
+    email: '{{email()}}',
+    phone: '{{phone("8-xxx-xxx-xx-xx")}}'
+  }
+]

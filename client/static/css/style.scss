@@ -1,0 +1,130 @@
+@import 'resources';
+@import 'reset-bootstrap';
+
+html,body {
+	height: 100%;
+	min-height: 100%;
+}
+body {
+	padding-top: 50px;
+	background-color: $bg;
+	overflow: hidden;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	bottom: 0;
+	overflow: auto;
+}
+.page-inner {
+	padding: 20px;
+	background-color: $white; 
+}
+
+.loader {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+	background-image: $loader-url;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+.login-page {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+.login-page > .container {
+	display: table-cell;
+	vertical-align: middle;
+}
+.form-signin {
+	min-width: 320px;
+	max-width: 500px;
+	width: 100%;
+	padding: 20px;
+	display: inline-block;
+	color: $white;
+	background-color: $main; 
+}
+.form-signin-logo {
+	width: 150px;
+	margin: 0 auto 20px;
+}
+.form-signin-logo > a {
+	color: $white;
+}
+.form-signin .form-group {
+	text-align: left;
+}
+.form-signin .btn {
+	background: $active;
+	color: $white;
+	border: none;
+}
+.form-signin input.form-control:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+/* Navbar */
+.navbar-logo {
+	float: left;
+    height: 50px;
+    padding: 14px 10px;
+    line-height: 20px;
+    font-size: 24px;
+    color: $bg;
+}
+.navbar-inverse {
+	background: $main;
+	border-color: #000;
+}
+.navbar-inverse .navbar-brand { color: $bg; }
+.navbar-inverse .navbar-nav > li > a { color: $white; }
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+	background: $active;
+}
+.navbar-exit {
+	color: $white;
+	float: right;
+	line-height: 50px;
+}
+.navbar-exit:active,
+.navbar-exit:hover { color: $white; }
+
+.mail-list-filter .btn-default {
+	margin-bottom: 10px;
+}
+.mail-list-filter .btn-default.active {
+	border-color: $white;
+	background: $active;
+	color: $bg;
+	text-shadow: none;
+	outline: none;
+}
+.mail-list-filter .btn-default.active,
+.mail-list-filter .btn-default:focus { outline: none; }
+
+.mail-list-table tr, .user-list-table tr { cursor: pointer; }
+.mail-list-table tr.unread { font-weight: bold; }
+
+.mail-detail-back { margin-bottom: 20px; }
+
+.user-list-table tr > td { vertical-align: middle !important; }
+
+.user-status-msg {
+	margin: 20px 0;
+}
