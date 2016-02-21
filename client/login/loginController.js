@@ -12,9 +12,9 @@ const LoginController = function(LoginService,$state) {
 			if(LoginService.checkCredits(this.credits))
 				$state.go('mail.list',{ box:'inbox' });
 			else
-				alert('Вы ввели неправильный логин или пароль');
+				alert('You entered invalid login or password');
 		} else {
-			alert('Введите логин и пароль');
+			alert('Enter the login and password');
 		}
 	}
 	

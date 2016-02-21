@@ -36,7 +36,10 @@ var webpackConfig = {
 				test: /\.js?$/,
 				include: CONTEXT,
 				exclude: /(node_modules|bower_components)/,
-      			loader: 'babel?presets[]=es2015'
+      			loader: 'babel',
+      			query: {
+			        presets: ['es2015']
+			    }
 			},
 			{ test: /\.tpl.html$/, loader:'ng-cache?prefix=[dir]/[dir]' }
 		],

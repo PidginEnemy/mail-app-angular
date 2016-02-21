@@ -21,6 +21,7 @@
     "angular-ui-router": "~0.2.18",
     "a0-angular-storage": "~0.0.13",
     "bootstrap": "~3.3.6",
-    "jquery": "~2.2.0"
+    "jquery": "~2.2.0",
+    "angular-mocks": "~1.5.0"
   }
 }
