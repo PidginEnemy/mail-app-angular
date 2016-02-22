@@ -19,6 +19,10 @@ You need open the command line and then folowing this instructions.
 1. Go to the project folder (via cmd).
 2. To create a bundle type in command line: `webpack`
 3. For tests type in command line: `karma start`
+ 
+## TODO
+1. Test coverage
+2. Restangular
 
 ## Credits
 Developers: Elay<br/>
