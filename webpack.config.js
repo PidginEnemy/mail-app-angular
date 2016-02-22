@@ -10,8 +10,8 @@ var ngAnnotatePlugin = require('ng-annotate-webpack-plugin');
 
 var CONTEXT = path.join(__dirname,'./client/');
 var FILES = {
-	vendor: path.join(CONTEXT,'./vendor'),
-	app: path.join(CONTEXT,'./app')
+	vendor: path.join(CONTEXT,'./vendor.js'),
+	app: path.join(CONTEXT,'./app.js')
 }
 
 var webpackConfig = {
@@ -22,7 +22,8 @@ var webpackConfig = {
 		filename: '[name].js'
 	},
 	resolve: {
-		modulesDirectories:['','bower_components']
+		modulesDirectories:['','bower_components'],
+		extensions: ['','.js']
 	},
 	resolveLoader: {
 		root: path.join(__dirname,'node_modules')

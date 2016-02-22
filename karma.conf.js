@@ -3,11 +3,12 @@
 
 var webpackConfig = require('./webpack.config');
 var path = require('path');
-var entry = path.resolve(webpackConfig.entry.app);
-var preprocessors = {};
-preprocessors[entry] = ['webpack'];
+var vendor = path.resolve(webpackConfig.entry.vendor);
+var app = path.resolve(webpackConfig.entry.app);
 
-console.log(preprocessors);
+var preprocessors = {};
+preprocessors[vendor] = ['webpack'];
+preprocessors[app] = ['webpack'];
 
 module.exports = function(config) {
   config.set({
@@ -23,17 +24,16 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        path.resolve('./bower_components/angular/angular.min.js'),
+        vendor,
         path.resolve('./bower_components/angular-mocks/angular-mocks.js'),
-        entry + '.js',
-        path.resolve('client/tests/*.js')
+        app,
+        path.resolve('./client/tests/**/*.js')
     ],
 
+    webpack: webpackConfig,
 
     // list of files to exclude
-    exclude: [
-    ],
-
+    exclude: [],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
@@ -60,17 +60,19 @@ module.exports = function(config) {
 
 
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: false,
+    autoWatch: true,
 
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: [
+        'Chrome'
+    ],
 
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true,
+    singleRun: false,
 
     // Concurrency level
     // how many browser should be started simultaneous
@@ -79,7 +81,7 @@ module.exports = function(config) {
     plugins: [
         require('karma-webpack'),
         'karma-jasmine',
-        'karma-chrome-launcher'
+        require('karma-chrome-launcher')
     ]
 
   })

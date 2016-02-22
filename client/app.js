@@ -20,7 +20,6 @@ const catMail = angular.module('catMail',[
 
 catMail.config(($httpProvider,$stateProvider,$urlRouterProvider,storeProvider) => {
 
-	//$httpProvider.interceptors.push('LoginInterceptor');
 	$urlRouterProvider.otherwise('/login');
 
 	storeProvider.setStore('sessionStorage');
