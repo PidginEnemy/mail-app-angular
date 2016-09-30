@@ -1,7 +1,7 @@
 # Mail application on AngularJS
 ## About
 This is a test application created in the course of AngularJS.
-Working demo is [here](http://pidginenemy.github.io/)
+Working demo is [here](http://pidginenemy.github.io/catmail/)
 ## Requirements
 * node, npm, bower;
 * webpack (for creating bundle);
